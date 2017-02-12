@@ -1,12 +1,19 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 
 from .models import KirrURL
 # Create your views here.
+
+class HomeView(View):
+	def get(self, request, *args, **kwargs):
+		return render(request, "shortener/home.html", {})
+
+
 def kirr_redirect_view(request,  shortcode=None, *args, **kwargs):
 	obj = get_object_or_404(KirrURL, shortcode=shortcode)
-	return HttpResponse("hello {shortcode}".format(shortcode=obj.url))
+	# return HttpResponse("hello {shortcode}".format(shortcode=obj.url))
+	return HttpResponseRedirect(obj.url)
 
 
 class KirrCBView(View):
@@ -14,7 +21,8 @@ class KirrCBView(View):
 		# print(args)
 		# print(kwargs)
 		obj = get_object_or_404(KirrURL, shortcode=shortcode)
-		return HttpResponse("Hello again")
+		# return HttpResponse("Hello again")
+		return HttpResponseRedirect(obj.url)
 
 	def post(self, request, *args, **kwargs):
 		return HttpResponse()

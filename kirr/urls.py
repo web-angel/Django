@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from shortener.views import kirr_redirect_view, KirrCBView
+from shortener.views import kirr_redirect_view, KirrCBView, HomeView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^a/(?P<shortcode>[\w-]+)/$', kirr_redirect_view),
-    url(r'^b/(?P<shortcode>[\w-]+)/$', KirrCBView.as_view()),
+    url(r'^$', HomeView.as_view()),
+    # url(r'^a/(?P<shortcode>[\w-]+)/$', kirr_redirect_view),
+    url(r'^(?P<shortcode>[\w-]+)/$', KirrCBView.as_view()),
 ]
