@@ -63,7 +63,7 @@ ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
 
 DEFAULT_REDIRECT_URL = 'https://kirr10.herokuapp.com'
-PARENT_HOST = 'kirr10.herokuapp.com'
+PARENT_HOST = 'https://kirr10.herokuapp.com'
 
 TEMPLATES = [
     {
