@@ -62,7 +62,7 @@ ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
 
-DEFAULT_REDIRECT_URL = 'http://www.yeimer-shorten-url.herokuapp.com'
+DEFAULT_REDIRECT_URL = 'https://www.yeimer-shorten-url.herokuapp.com'
 PARENT_HOST = 'yeimer-shorten-url.herokuapp.com'
 
 TEMPLATES = [
