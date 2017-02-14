@@ -25,7 +25,7 @@ SECRET_KEY = '(dho4w(x40=2@q7e%2mz-supm(uoqow^urb(+(3_6v1svc=j_!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.yeimer.co', 'yeimer.co']
+ALLOWED_HOSTS = ['www.yeimer.co', 'yeimer.co', 'yeimer-shorten-url.herokuapp.com']
 
 
 # Application definition
