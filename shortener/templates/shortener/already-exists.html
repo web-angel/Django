@@ -1,9 +1,18 @@
-<div style="width: 800px; margin: 0 auto">
-	<h1>ALready Exists </h1>
+{% extends "shortener-ext/base.html" %}
 
-	{{ object.url}}
+{% block title %} Already Exists {% endblock title %}
 
-	{{ object.shortcode }}
-	
-	<a href="/">New</a>
-</div>
+{% block content %}
+
+			<div class="">
+				<h1>This Url Already Exists</h1>
+				{{ object.url}}
+				</br>
+				count {{ object.clickevent.count}}
+				<a class="btn btn-primary btn-link" href="{{ object.get_short_url}}">{{ object.get_short_url}}</a>
+				</br>
+				<a class="btn btn-default" href="/">New</a>
+			</div>
+		
+
+{% endblock %}

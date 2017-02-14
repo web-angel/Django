@@ -1,8 +1,18 @@
+{% extends "shortener-ext/base.html" %}
 
-<div style="width: 800px; margin: 0 auto">
-	<h1>Here is your URL</h1>
-	{{ object.url}}
+{% block title %} Success {% endblock %}
 
-	{{ object.shortcode}}
-	<a href="/">New</a>
-</div>
+{% block content %}
+
+			<div class="">
+				<h1>Here is your URL</h1>
+				{{ object.url}}
+				</br>
+				count {{ object.clickevent.count}}
+				<a class="btn btn-primary btn-link" href="{{ object.get_short_url}}">{{ object.get_short_url}}</a>
+				</br>
+				<a class="btn btn-default" href="/">New</a>
+			</div>
+		
+
+{% endblock %}

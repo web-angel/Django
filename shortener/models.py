@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
 
+# from django.core.urlresolvers import reverse
+from django_hosts.resolvers import reverse
 from .validators import validate_url, validate_dot_com
 from .utils import code_generator, create_shortcode
 # Create your models here.\
@@ -39,6 +41,8 @@ class KirrURL(models.Model):
 	def save(self, *args, **kwargs):
 		if self.shortcode is None or self.shortcode == "":
 			self.shortcode = create_shortcode(self)
+		if not "http" in self.url:
+			self.url = "http://" + self.url
 		super(KirrURL, self).save(*args, **kwargs)
 
 	def __str__(self):
@@ -46,3 +50,10 @@ class KirrURL(models.Model):
 
 	def __unicode__(self):
 		return str(self.url)
+
+	def get_short_url(self):
+		# url_path = reverse("shortcode", kwargs={'shortcode':self.shortcode})
+		url_path = reverse("shortcode", kwargs={'shortcode':self.shortcode}, host='www', scheme='http')
+		return url_path
+
+	# def get_short_url(self):

@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(dho4w(x40=2@q7e%2mz-supm(uoqow^urb(+(3_6v1svc=j_!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['yeimer.com', 'www.yeimer.com', 'www.kirr.co', 'kirr.co', 'tirr.com', 'www.tirr.com']
+ALLOWED_HOSTS = ['www.kirr.co', 'kirr.co']
 
 
 # Application definition
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django_hosts',
 
     #custom apps
-    'shortener'
+    'shortener',
+    'analytics'
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = 'http://www.tirr.com:8000'
+
+DEFAULT_REDIRECT_URL = 'http://www.kirr.com'
+PARENT_HOST = 'kirr.com'
 
 TEMPLATES = [
     {
