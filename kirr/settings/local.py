@@ -62,8 +62,8 @@ ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
 
-DEFAULT_REDIRECT_URL = 'http://www.kirr.com'
-PARENT_HOST = 'kirr.com'
+DEFAULT_REDIRECT_URL = 'http://www.kirr.co'
+PARENT_HOST = 'kirr.co'
 
 TEMPLATES = [
     {
