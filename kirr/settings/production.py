@@ -25,7 +25,7 @@ SECRET_KEY = '(dho4w(x40=2@q7e%2mz-supm(uoqow^urb(+(3_6v1svc=j_!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['kirr10.herokuapp.com']
+ALLOWED_HOSTS = ['www.kirr10.herokuapp.com','kirr10.herokuapp.com']
 
 
 # Application definition
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
 
-DEFAULT_REDIRECT_URL = 'http://kirr10.herokuapp.com'
+DEFAULT_REDIRECT_URL = 'https://kirr10.herokuapp.com'
 PARENT_HOST = 'kirr10.herokuapp.com'
 
 TEMPLATES = [
