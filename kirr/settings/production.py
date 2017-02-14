@@ -25,7 +25,7 @@ SECRET_KEY = '(dho4w(x40=2@q7e%2mz-supm(uoqow^urb(+(3_6v1svc=j_!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.kirr.co', 'kirr.co']
+ALLOWED_HOSTS = ['www.yeimer.co', 'yeimer.co']
 
 
 # Application definition
@@ -62,8 +62,8 @@ ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
 
-DEFAULT_REDIRECT_URL = 'http://www.kirr.co'
-PARENT_HOST = 'kirr.co'
+DEFAULT_REDIRECT_URL = 'http://www.yeimer.co'
+PARENT_HOST = 'yeimer.co'
 
 TEMPLATES = [
     {
