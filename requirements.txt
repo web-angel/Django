@@ -3,7 +3,6 @@ Django==1.10.2
 django-hosts==2.0
 gunicorn==19.6.0
 packaging==16.8
-pkg-resources==0.0.0
 pyparsing==2.1.10
 six==1.10.0
 unicorn==1.0.0rc3
