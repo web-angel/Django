@@ -25,7 +25,7 @@ SECRET_KEY = '(dho4w(x40=2@q7e%2mz-supm(uoqow^urb(+(3_6v1svc=j_!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.kirr.co', 'kirr.co']
+ALLOWED_HOSTS = ['www.kirr.co', 'kirr.co','yeimer-shorten-url.herokuapp.com','www.yeimer-shorten-url.herokuapp.com']
 
 
 # Application definition
@@ -62,8 +62,8 @@ ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
 
-DEFAULT_REDIRECT_URL = 'http://www.kirr.co:5000'
-PARENT_HOST = 'kirr.co:5000'
+DEFAULT_REDIRECT_URL = 'http://www.yeimer-shorten-url.herokuapp.com'
+PARENT_HOST = 'yeimer-shorten-url.herokuapp.com'
 
 TEMPLATES = [
     {
