@@ -1,1 +1,1 @@
-src
+Django Project
